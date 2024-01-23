@@ -19,10 +19,10 @@ int main()
     
         /* 插入数据*/
         int tmp = 3;
-        dynamicArrayInsertData(&array, (void *)tmp);
+        dynamicArrayInsertData(&array, (void *)&tmp);
         for(int idx = 0; idx <= DEFAULT_NUM; idx++)
         {
-            dynamicArrayInsertData(&array, (void *)idx);
+            dynamicArrayInsertData(&array, (void *)&idx);
         }
 
         /* 修改数据*/

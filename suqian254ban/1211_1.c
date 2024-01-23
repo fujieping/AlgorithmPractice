@@ -40,27 +40,27 @@ void fastSost(int *date, int start, int len)
 }
 #endif
 
-#if 0 // 作业2，有序数组去重
+#if 1 // 作业2，有序数组去重
 void Deduplication(int *RandArray, int end)
 {
-    int count=0;
-    for(int indx=0;indx<end;indx++)
+    int count = 0;
+    for (int indx = 0; indx < end; indx++)
     {
-        if(RandArray[indx]==RandArray[indx+1])
-        count+=1;
-        RandArray[indx+1-count]=RandArray[indx+1];
+        if (RandArray[indx] == RandArray[indx + 1])
+            count += 1;
+        RandArray[indx + 1 - count] = RandArray[indx + 1];
     }
-    end -=count;
+    end -= count;
     for (int idx = 0; idx < end; idx++)
     {
         printf("%d ", RandArray[idx]);
     }
     printf("\n");
-    printf("len:%d\n", end+1);
+    printf("len:%d\n", end + 1);
 }
 #endif
 
-#if 0 // 作业3，删除数组指定元素
+#if 1// 作业3，删除数组指定元素
 void DeleteElement(int *ptr, int end, int element)
 {
     int count = 0;
@@ -108,7 +108,7 @@ int *mergeOrderNums(int *nums1, int num1Size, int *nums2, int num2Size, int *new
             newNumSize[idx1 + idx2] = nums2[idx2];
             idx2++;
         }
-        }
+    }
     return newNumSize;
 }
 #endif
@@ -153,8 +153,8 @@ int main()
     PrintArray(RandArray2, ARRAY_SiZE);
 
     int *newArray = mergeOrderNums(RandArray, ARRAY_SiZE, RandArray2, ARRAY_SiZE, RandArray3);
-    
-    PrintArray(newArray,ARRAY_SiZE*2);
+
+    PrintArray(newArray, ARRAY_SiZE * 2);
 
     // Deduplication(RandArray, len);
     // printf("\n请输入需要删除的数!\n");
